@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vacation planner</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section class="searchBox">
+        <form action="">
+            <h2>Search national park</h2>
+            <label for="search-box">Search term:</label>
+            <input type="text" name="search-box" id="js-search-term" placeholder="Enter a name of the park" required>
+            <br>
+            <label for="max-result">Number of result:</label>
+            <input type="number" name="max-result" id="js-max-number" placeholder="max number to display">
+            <br>
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section class="result-box hidden">
+        <h2>Your search result:</h2>
+        <ul class="result-list">
+        </ul>
+    </section>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>

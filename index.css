@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ababab;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    line-height: 2em;
+}
+input{
+    padding: 10px;
+}
+section{
+    padding: 10px 0 10px 0;
+    margin: 0 auto;
+    width: 60%;
+    background-color: antiquewhite;
+}
+h2{
+    margin: 20px 0 20px 0;
+}
+button{
+    padding: 10px 80px 10px 80px;
+}
+.result-box{
+    margin-top: 40px;
+}
+.hidden{
+    display: none;
+}
+.result-header{
+    font-size: 2em;
+}
+li{
+    list-style-type: none;
+}
+ul{
+    margin: 0 auto;
+    width: 80%;
+}
+@media only screen and (max-width: 600px) {
+    section{
+        width: 100%;
+    }
+  }
