@@ -11,7 +11,10 @@ body{
     line-height: 2em;
 }
 input{
+    margin-top: 10px;
     padding: 10px;
+    border-radius: 5px;
+    width: 100px;
 }
 section{
     padding: 10px 0 10px 0;
@@ -21,12 +24,14 @@ section{
 }
 h2{
     margin: 20px 0 20px 0;
+    text-transform: uppercase;
 }
 button{
+    margin-top: 10px;
     padding: 10px 80px 10px 80px;
 }
 .result-box{
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .hidden{
     display: none;
@@ -44,5 +49,8 @@ ul{
 @media only screen and (max-width: 600px) {
     section{
         width: 100%;
+    }
+    input{
+        padding: 10px;
     }
   }

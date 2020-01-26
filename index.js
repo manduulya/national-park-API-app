@@ -10,29 +10,31 @@ function formatQueryParams(params){
 }
 
 function displayResults(responseJson, maxNumber){
-    console.log(responseJson);
 
     $('.result-list').empty();
 
     for (let i=0; i<responseJson.data.length & i<maxNumber; i++){
-        $('.result-list').append(
-            `<li><h3>Full name: </h3><p class="result-header">${responseJson.data[i].name}</p></li>
-            <li><h3>Description: </h3><p>${responseJson.data[i].description}</p></li>
-            <li><h3>Website URL: </h3><a href="">${responseJson.data[i].url}</a></li>`
+        $('body').append(
+            `<section class="result-box hidden">
+                <ul class="result-list">
+                    <li><h3>Full name: </h3><p class="result-header">${responseJson.data[i].name}</p></li>
+                    <li><h3>Description: </h3><p>${responseJson.data[i].description}</p></li>
+                    <li><h3>Website URL: </h3><a href="${responseJson.data[i].url}">${responseJson.data[i].url}</a></li>
+                </ul>
+            </section>`
         )
     }
+
     $('.result-box').removeClass('hidden');
 }
 
 function getNationalPark(query, maxNumber=10){
     const params = {
-        api_key: apiKey,
-        q: query
+        stateCode: query,
+        api_key: apiKey        
     };
     const queryString = formatQueryParams(params)
     const url = apiUrl + '?' + queryString;
-
-    console.log(url);
 
     fetch(url)
     .then(response => {
