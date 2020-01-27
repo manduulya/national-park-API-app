@@ -11,17 +11,17 @@ function formatQueryParams(params){
 
 function displayResults(responseJson, maxNumber){
 
-    $('.result-list').empty();
+    $('.result-box').empty();
 
     for (let i=0; i<responseJson.data.length & i<maxNumber; i++){
-        $('body').append(
-            `<section class="result-box hidden">
+        $('.result-box').append(
+            `<div>
                 <ul class="result-list">
                     <li><h3>Full name: </h3><p class="result-header">${responseJson.data[i].name}</p></li>
                     <li><h3>Description: </h3><p>${responseJson.data[i].description}</p></li>
                     <li><h3>Website URL: </h3><a href="${responseJson.data[i].url}">${responseJson.data[i].url}</a></li>
                 </ul>
-            </section>`
+            </div>`
         )
     }
 
